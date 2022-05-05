@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
 import { getFirestore, FieldValue } from "firebase/firestore";
 
 import "firebase/firestore";
@@ -22,4 +22,4 @@ const projectAuth = getAuth(app);
 const projectFirestore = getFirestore(app);
 const timestamp = FieldValue.serverTimestamp;
 
-export { projectFirestore, projectAuth, timestamp, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword };
+export { projectFirestore, projectAuth, timestamp, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut, onAuthStateChanged };
